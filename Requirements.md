@@ -1,9 +1,9 @@
-#Requirements
+# Requirements
 
-###Goals
+### Goals
 - Password length = 15 characters
 
-###Stretch goals
+### Stretch goals
 
 - Ability to set password length
 - Add "copy-on-click"
