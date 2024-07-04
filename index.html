@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div class="textContainer">
+        <h1>Generate a</h1>
+        <h1 id="h1color">random password</h1>
+        <p>Never use an insecure password again.</p>
+        <button class="passwordButton" id="passwordButton-el" onclick="passwordButton()">Generate passwords</button>
+      </div>
+      <hr />
+      <div class="passwordContainer">
+        <div class="passwordFieldContainer">
+          <input type="text" class="passwordField" id="password1" readonly />
+          <button class="copyButton" id="copyButton1">
+            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20">
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+            </svg>
+          </button>
+        </div>
+        <div class="passwordFieldContainer">
+          <input type="text" class="passwordField" id="password2" readonly />
+          <button class="copyButton" id="copyButton2">
+            <svg xmlns="http://www.w3.org/2000/svg"  height="20" viewBox="0 0 24 24" width="20">
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

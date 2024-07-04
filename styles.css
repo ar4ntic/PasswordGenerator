@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  font-family: "Karla", sans-serif;
+}
+
+h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 40px;
+}
+
+#h1color {
+  color: #4adf86;
+}
+
+p {
+  color: #d5d4d8;
+  font-weight: 100;
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+
+.passwordButton {
+  width: 191px;
+  height: 42px;
+  margin-top: 50px;
+  background: #10b981;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+  box-shadow: 4px 4px 5px hsla(0, 0%, 0%, 0.447);
+  cursor: pointer;
+}
+
+.passwordButton:active {
+    box-shadow: none;
+}
+
+.copyButton {
+  fill: #d5d4d8;
+  background: #273549;
+  width: 30px;
+  height: 39px;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+
+.copyButton:hover {
+  fill: #10b981;
+}
+
+.copyButton:active {
+    fill: #10d996;
+  }
+
+
+hr {
+  position: absolute;
+  width: 446px;
+  margin: 360px 0 0 52px;
+  border: 1px solid #2f3e53;
+  border-radius: 2px;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  height: 550px;
+  margin: 65px auto;
+  background: #1f2937;
+  border-radius: 4px;
+}
+
+.textContainer {
+  margin: 115px 0 0 52px;
+}
+
+.passwordContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 52px;
+}
+
+.passwordFieldContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.passwordField {
+  width: 181px;
+  height: 39px;
+  background: #273549;
+  border: none;
+  border-radius: 6px 0 0 6px;
+  color: #55f991;
+  text-align: center;
+}
+
+.passwordField:focus {
+  outline: none;
+}
