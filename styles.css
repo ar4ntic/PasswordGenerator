@@ -9,6 +9,8 @@ body {
   font-family: "Karla", sans-serif;
 }
 
+/* UTILITY CLASSES */
+
 h1 {
   color: white;
   font-size: 2.5rem;
@@ -20,46 +22,18 @@ h1 {
   color: #4adf86;
 }
 
-p {
+h2 {
   color: #d5d4d8;
   font-weight: 100;
   font-size: 1.3rem;
   margin-top: 10px;
 }
 
-.passwordButton {
-  width: 191px;
-  height: 42px;
-  margin-top: 50px;
-  background: #10b981;
-  border: none;
-  border-radius: 6px;
-  color: white;
+p {
+  color: #d5d4d8;
+  font-weight: 100;
   font-size: 1rem;
-  box-shadow: 4px 4px 5px hsla(0, 0%, 0%, 0.447);
-  cursor: pointer;
-}
-
-.passwordButton:active {
-    box-shadow: none;
-}
-
-.copyButton {
-  fill: #d5d4d8;
-  background: #273549;
-  width: 30px;
-  height: 39px;
-  border: none;
-  border-radius: 0 6px 6px 0;
-  cursor: pointer;
-}
-
-.copyButton:hover {
-  fill: #10b981;
-}
-
-.copyButton:active {
-    fill: #10d996;
+  line-height: 2rem;
 }
 
 hr {
@@ -69,6 +43,8 @@ hr {
   border: 1px solid #2f3e53;
   border-radius: 2px;
 }
+
+/* MAIN & TEXT CONTAINER */
 
 .mainContainer {
   display: flex;
@@ -84,12 +60,99 @@ hr {
   margin: 115px 0 0 52px;
 }
 
+/* INPUT CONTAINER */
+
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.passwordButton {
+  width: 191px;
+  height: 42px;
+  background: #10b981;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+  box-shadow: 4px 4px 5px hsla(0, 0%, 0%, 0.447);
+}
+
+.passwordButton:active {
+  box-shadow: none;
+}
+
+.settingsContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.toggleContainer {
+  width: 100px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #273549;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #10b981;
+}
+
+input:focus + .slider {
+  box-shadow: none;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+/* PASSWORD CONTAINER */
+
 .passwordContainer {
   display: flex;
   justify-content: space-between;
   margin: 80px 52px;
 }
-
 .passwordFieldContainer {
   position: relative;
   display: flex;
@@ -108,4 +171,21 @@ hr {
 
 .passwordField:focus {
   outline: none;
+}
+
+.copyButton {
+  fill: #d5d4d8;
+  background: #273549;
+  width: 30px;
+  height: 39px;
+  border: none;
+  border-radius: 0 6px 6px 0;
+}
+
+.copyButton:hover {
+  fill: #10b981;
+}
+
+.copyButton:active {
+  fill: #10d996;
 }
