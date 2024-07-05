@@ -3,54 +3,40 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
     "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",
     ":",";","<",">",".","?","/"];
 
-
 let passwordEl = document.getElementById("passwordButton-el")
+let passwordFieldOneEl = document.getElementById("passwordOne-el")
+let passwordFieldTwoEl = document.getElementById("passwordTwo-el")
 
-console.log(passwordEl)
 
 function passwordButton() {
-    console.log("Clicked")
+    passwordFieldOneEl.value = ""
+    passwordFieldTwoEl.value = ""
+    for (let i = 0; i < characters.length && i < 15; i++) {
+    let randomPasswordOne = Math.floor(Math.random() * characters.length)
+    let randomPasswordTwo = Math.floor(Math.random() * characters.length)
+    passwordFieldOneEl.value += characters[randomPasswordOne]
+    passwordFieldTwoEl.value += characters[randomPasswordTwo]
+    }
 }
 
+function copyPasswordOne() {
+    var copyText = document.getElementById("passwordOne-el")
+    copyText.select()
+    copyText.setSelectionRange(0, 99999) // For mobile devices
+    navigator.clipboard.writeText(copyText.value)
+    window.getSelection().removeAllRanges()
+}
 
-const copyButton1 = document.getElementById("copyButton1");
-const copyButton2 = document.getElementById("copyButton1");
+function copyPasswordTwo() {
+    var copyText = document.getElementById("passwordTwo-el")
+    copyText.select()
+    copyText.setSelectionRange(0, 99999) // For mobile devices
+    navigator.clipboard.writeText(copyText.value)
+    window.getSelection().removeAllRanges()
+}
 
-const passwordField1 = document.getElementById("password1");
-const passwordField2 = document.getElementById("password2");
-
-copyButton1.addEventListener("click", function() {
-    // Select the text inside the input field
-    passwordField1.select();
-    passwordField1.setSelectionRange(0, 99999); /* For mobile devices */
-
-    // Copy the selected text to the clipboard
-    document.execCommand("copy");
-
-    // Deselect the text
-    window.getSelection().removeAllRanges();
-
-    // Optionally, provide some visual feedback
-    copyButton1.classList.add("copied"); // Example: Add a class for visual feedback
-    setTimeout(() => {
-        copyButton1.classList.remove("copied"); // Reset the class after a delay
-    }, 1500); // Reset after 1.5 seconds
-});
-
-copyButton2.addEventListener("click", function() {
-    // Select the text inside the input field
-    passwordField2.select();
-    passwordField2.setSelectionRange(0, 99999); /* For mobile devices */
-
-    // Copy the selected text to the clipboard
-    document.execCommand("copy");
-
-    // Deselect the text
-    window.getSelection().removeAllRanges();
-
-    // Optionally, provide some visual feedback
-    copyButton2.classList.add("copied"); // Example: Add a class for visual feedback
-    setTimeout(() => {
-        copyButton2.classList.remove("copied"); // Reset the class after a delay
-    }, 1500); // Reset after 1.5 seconds
-});
+window.addEventListener('focus', function() {
+    var copyText = document.getElementById("passwordOne-el")
+    var copyText = document.getElementById("passwordTwo-el")
+    copyText.setSelectionRange(0, 0)
+})

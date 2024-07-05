@@ -10,7 +10,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <link rel="icon" href="images/key-fav.png" />
+    <title>Password Generator</title>
   </head>
   <body>
     <div class="mainContainer">
@@ -23,8 +24,8 @@
       <hr />
       <div class="passwordContainer">
         <div class="passwordFieldContainer">
-          <input type="text" class="passwordField" id="password1" readonly />
-          <button class="copyButton" id="copyButton1">
+          <input type="text" class="passwordField" id="passwordOne-el" readonly />
+          <button class="copyButton" onclick="copyPasswordOne()">
             <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" width="20">
               <path d="M0 0h24v24H0z" fill="none" />
               <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
@@ -32,8 +33,8 @@
           </button>
         </div>
         <div class="passwordFieldContainer">
-          <input type="text" class="passwordField" id="password2" readonly />
-          <button class="copyButton" id="copyButton2">
+          <input type="text" class="passwordField" id="passwordTwo-el" readonly />
+          <button class="copyButton" onclick="copyPasswordTwo()">
             <svg xmlns="http://www.w3.org/2000/svg"  height="20" viewBox="0 0 24 24" width="20">
               <path d="M0 0h24v24H0z" fill="none" />
               <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
