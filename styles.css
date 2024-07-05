@@ -36,10 +36,14 @@ p {
   line-height: 2rem;
 }
 
+img {
+  width: 130px;
+}
+
 hr {
   position: absolute;
   width: 446px;
-  margin: 360px 0 0 52px;
+  margin: 380px 0 0 52px;
   border: 1px solid #2f3e53;
   border-radius: 2px;
 }
@@ -54,10 +58,11 @@ hr {
   margin: 65px auto;
   background: #1f2937;
   border-radius: 4px;
+  padding-top: 15px;
 }
 
 .textContainer {
-  margin: 115px 0 0 52px;
+  margin: 0 52px;
 }
 
 /* INPUT CONTAINER */
@@ -151,7 +156,7 @@ input:checked + .slider:before {
 .passwordContainer {
   display: flex;
   justify-content: space-between;
-  margin: 80px 52px;
+  margin: 70px 52px;
 }
 .passwordFieldContainer {
   position: relative;
